@@ -77,19 +77,6 @@ The HMM predicts likely letters based on learned letter transition and emission 
 ```
 
 ---
-
-## ▶️ How to Run
-
-1. Place your training (`corpus.txt`) and test (`test.txt`) data in the `Data/` folder.
-2. Run:
-
-   ```bash
-   python hangman_hmm_rl.py
-   ```
-3. The model will train the HMM, then the DQN agent, and finally evaluate on the test set.
-
----
-
 ## 🏁 Outcome
 
 The trained agent learns to efficiently guess letters, balancing statistical insight from the HMM with learned reinforcement strategies for optimal performance in Hangman.
