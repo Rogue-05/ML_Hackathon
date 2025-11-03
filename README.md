@@ -23,7 +23,7 @@ The HMM predicts likely letters based on learned letter transition and emission 
   Trained on a corpus of words to estimate state transitions and emission probabilities for different word lengths.
   Provides letter probabilities as hints to guide the RL agent.
 
-* **DQN (Deep Q-Network):**
+* **QN (Q-Network):**
   Learns optimal letter-guessing policies using states (masked word, guessed letters, lives, and HMM probabilities) and a reward system.
   Uses ε-greedy exploration with decay for balancing exploration and exploitation.
 
