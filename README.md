@@ -1,7 +1,3 @@
-Here’s a concise and well-formatted **README.md** file for your Hangman HMM-RL project:
-
----
-
 # Hangman using HMM + Reinforcement Learning
 
 **REPO for Team 2, D Section**
