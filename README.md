@@ -23,7 +23,7 @@ The HMM predicts likely letters based on learned letter transition and emission 
   Trained on a corpus of words to estimate state transitions and emission probabilities for different word lengths.
   Provides letter probabilities as hints to guide the RL agent.
 
-* **QN (Q-Network):**
+* **QL (Q-Learning):**
   Learns optimal letter-guessing policies using states (masked word, guessed letters, lives, and HMM probabilities) and a reward system.
   Uses ε-greedy exploration with decay for balancing exploration and exploitation.
 
@@ -31,9 +31,9 @@ The HMM predicts likely letters based on learned letter transition and emission 
 
 ## ⚙️ Training Pipeline
 
-1. **Train HMM:**
+1. **Train HMMOracle:**
    Learns statistical patterns from the word corpus.
-2. **Train DQN-HMM Agent:**
+2. **Train QL-HMM Agent:**
    The RL agent interacts with the Hangman environment to maximize rewards using HMM guidance.
 3. **Evaluate Agent:**
    Tests the trained model on unseen words and reports accuracy, wrong guesses, and score.
@@ -48,7 +48,7 @@ The HMM predicts likely letters based on learned letter transition and emission 
   * +20 correct letter
   * −2 wrong letter
   * −5 repeated guess
-  * +200 win
+  * +100 win
   * −100 loss
 * **Exploration:** ε-greedy strategy with decay, guided by HMM probabilities
 * **Integration:** HMM outputs letter probabilities, which are fed into the RL state vector for better contextual awareness.
